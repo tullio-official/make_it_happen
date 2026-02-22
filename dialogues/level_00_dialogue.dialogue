@@ -1,0 +1,42 @@
+~ start
+Pam: Hello! I am Pam, your Planetary Administration Module.
+Pam: You were late to your first shift. Interesting choice!
+- Thanks! :D
+- I got stuck in traffic.
+- Um...
+do generate_workspace()
+Pam: We should get to work! This is your desk. Or, well, a little diagram of it.
+Pam: Would you like a hot drink? Tea? Coffee?
+- Tea, please.
+	Pam: Amazing choice! Here's some tea and some hot water.
+- Coffee, please.
+	Pam: Wrong! Here's some tea and some hot water.
+- I don't really like either of those...
+	Pam: Better start! Here's some tea and some hot water.
+do spawn_drink_items()
+Pam: Sadly, I can't do everything for you. Try putting the teabag in the water!
+=> END
+
+~ successful_merge
+Pam: Perfect execution. The water is now tea. Bland!
+Pam: We can now move on to actual work.
+=> END
+
+~ broken_godputer_1
+Pam: Please d0 not p0ur %73calding w_ater on the Godputer. Pleas/x00.
+=> END
+
+~ broken_godputer_2
+Pa/0m: Teabag%20plus%20water/0. E%61asy. Pretty pl%65ase?
+=> END
+
+~ broken_godputer_3
+ERROR: U%68 0h... [PROTOCOL: SAFETY SHUTDOWN]
+Greg, Manager: {{PlayerName}}! Literally what are you doing?
+- Waterin' the 'puter, sir!
+	Greg, Manager: Do we not do psych evals anymore? Just move. I'll fix it.
+- I don't know what got over me... [i]Grog?[/i] Grog.
+	Greg, Manager: GROG?! GROG. Just... move. I'll fix it.
+- Limit testing? I guess?
+	Greg, Manager: MY limits are being tested. Move. I'll fix it.
+=> END
