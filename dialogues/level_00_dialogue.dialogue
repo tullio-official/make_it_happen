@@ -1,29 +1,32 @@
 ~ start
-Pam: Hello! I am Pam, your Planetary Administration Module.
-Pam: You were late to your first shift. Interesting choice!
+P․A․M․: Hello! I am P․A․M․, your Planetary Administration Module.
+P․A․M․: You were late to your first shift. Interesting choice!
 - Thanks! :D
+	P․A․M․: Optimism! Another choice.
 - I got stuck in traffic.
+	P․A․M․: Mhm! Yeah!
 - Um...
-do generate_workspace()
-Pam: We should get to work! This is your desk. Or, well, a little diagram of it.
-Pam: Would you like a hot drink? Tea? Coffee?
+P․A․M․: Well, we should get to work! This is your desk.[do wait(0.25)][do generate_grid()][do wait(0.25)] Or, well, a little diagram of it.
+P․A․M․: And this is your Godputer.[do wait(0.25)][do place_item(load("res://scenes/elements/godputer.tscn").instantiate(), 1, 1)][do wait(0.25)] That's where the magic happens. Literally!
+P․A․M․: Right now, I fear the... [i]magic[/i][do wait(0.5)] is definitely in the way.[wait] Try moving it farther away from you, in any of the top cells.
+P․A․M․: Perfect! Look how perfectly far away it is. Huge moment for Big Glasses.
+P․A․M․: Would you like a hot drink? Tea? Coffee?
 - Tea, please.
-	Pam: Amazing choice! Here's some tea and some hot water.
+	P․A․M․: Amazing choice! Here's some tea and some hot water.
 - Coffee, please.
-	Pam: Wrong! Here's some tea and some hot water.
+	P․A․M․: Wrong! Here's some tea and some hot water.
 - I don't really like either of those...
-	Pam: Better start! Here's some tea and some hot water.
-do spawn_drink_items()
-Pam: Sadly, I can't do everything for you. Try putting the teabag in the water!
+	P․A․M․: Better start! Here's some tea and some hot water.
+P․A․M․: Sadly, I can't do everything for you. Try putting the teabag in the water!
 => END
 
 ~ successful_merge
-Pam: Perfect execution. The water is now tea. Bland!
-Pam: We can now move on to actual work.
+P․A․M․: Perfect execution. The water is now tea. Bland!
+P․A․M․: We can now move on to actual work.
 => END
 
 ~ broken_godputer_1
-Pam: Please d0 not p0ur %73calding w_ater on the Godputer. Pleas/x00.
+P․A․M․: Please d0 not p0ur %73calding w_ater on the Godputer. Pleas/x00.
 => END
 
 ~ broken_godputer_2

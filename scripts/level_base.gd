@@ -2,70 +2,67 @@ extends Node2D
 
 @export var grid_cols : int = 2
 @export var grid_rows : int = 2
-@export var cell_size_percent : float = 0.10
-@export var cell_spacing_percent : float = 0.015
-
-@onready var grid_container : GridContainer = $GridContainer
-@onready var screen_size : Vector2 = get_viewport_rect().size
-
-var calculated_cell_size : float = 0.0
-var calculated_cell_spacing : float = 0.0
-var total_width : float = 0.0
-var total_height : float = 0.0
+@export var cell_size : float = 0.10
+@export var cell_spacing : float = 0.015
+@export var sprite_ratio : float = 0.80
+@export var sprite_native_size : float = 256.0
 
 var grid_data : Dictionary = {}
+var calculated_cell_size : float = 0.0
 
 func _ready() -> void:
 	generate_grid()
 
 func generate_grid() -> void:
-	# Calculate effective cell size based on VP height
-	calculated_cell_size = screen_size.y * cell_size_percent
-	calculated_cell_spacing = screen_size.y * cell_spacing_percent
-
-	# Define GridContainer stuff
-	grid_container.columns = grid_cols
-	grid_container.add_theme_constant_override("h_separation", int(calculated_cell_spacing))
-	grid_container.add_theme_constant_override("v_separation", int(calculated_cell_spacing))
-
-	# Calculate total size of the grid
-	total_width = (grid_cols * calculated_cell_size) + ((grid_cols - 1) * calculated_cell_spacing)
-	total_height = (grid_rows * calculated_cell_size) + ((grid_rows - 1) * calculated_cell_spacing)
-
-	# Find grid anchor point
-	grid_container.position = Vector2(
-		(screen_size.x - total_width) / 2.0,
-		(screen_size.y - total_height) / 2.0
-	)
+	grid_data.clear()
 	
-	# Populate the grid
-	for i in range(grid_rows*grid_cols):
-		var cell = ColorRect.new()
-		cell.custom_minimum_size = Vector2(calculated_cell_size, calculated_cell_size)
-		cell.color = Color("#4A4A4A")
-		grid_container.add_child(cell)
+	var screen_size : Vector2 = get_viewport_rect().size
+	calculated_cell_size = screen_size.y * cell_size
+	var calculated_cell_spacing : float = screen_size.y * cell_spacing
+	
+	var total_width : float = (grid_cols * calculated_cell_size) + ((grid_cols - 1) * calculated_cell_spacing)
+	var total_height : float = (grid_rows * calculated_cell_size) + ((grid_rows - 1) * calculated_cell_spacing)
+	
+	var start_x : float = (screen_size.x - total_width) / 2.0
+	var start_y : float = (screen_size.y - total_height) / 2.0
+	
+	for y in range(grid_rows):
+		for x in range(grid_cols):
+			var pos_x : float = start_x + (x * (calculated_cell_size + calculated_cell_spacing))
+			var pos_y : float = start_y + (y * (calculated_cell_size + calculated_cell_spacing))
+			var pixel_position : Vector2 = Vector2(pos_x, pos_y)
+			
+			var cell_visual := ColorRect.new()
+			cell_visual.size = Vector2(calculated_cell_size, calculated_cell_size)
+			cell_visual.position = pixel_position
+			cell_visual.color = Color("#4A4A4A")
+			add_child(cell_visual)
+			
+			grid_data[Vector2(x, y)] = {
+				"pixel_position": pixel_position,
+				"item": null
+			}
 
-func place_item_in_grid(item_node: Node, grid_x: int, grid_y: int) -> void:
-	# ERROR Out of bounds
-	if grid_x < 0 or grid_x >= grid_cols or grid_y < 0 or grid_y >= grid_rows:
-		push_error("Grid coordinates out of bounds.")
+func place_item(item_node, grid_x: int, grid_y: int) -> void:
+	var target_coord := Vector2(grid_x, grid_y)
+	
+	if not grid_data.has(target_coord):
+		push_warning("Attempted to place item out of grid bounds.")
 		return
-
-	# Store cell coordinates
-	var cell_coord = Vector2i(grid_x, grid_y)
-	
-	# ERROR Cell occupied
-	if grid_data.has(cell_coord):
-		push_error("Cell is already occupied.")
+		
+	if grid_data[target_coord]["item"] != null:
+		push_warning("Target cell is already occupied.")
 		return
-
-	# Fill cell
-	var cell_index = (grid_y * grid_cols) + grid_x
-	var target_cell = grid_container.get_child(cell_index)
-
-	target_cell.add_child(item_node)
+		
+	var cell_top_left : Vector2 = grid_data[target_coord]["pixel_position"]
+	var center_offset := Vector2(calculated_cell_size / 2.0, calculated_cell_size / 2.0)
 	
-	if "position" in item_node:
-		item_node.position = Vector2(calculated_cell_size / 2.0, calculated_cell_size / 2.0)
-
-	grid_data[cell_coord] = item_node
+	item_node.position = cell_top_left + center_offset
+	
+	var target_size : float = calculated_cell_size * sprite_ratio
+	var scale_factor : float = target_size / sprite_native_size
+	item_node.scale = Vector2(scale_factor, scale_factor)
+	
+	add_child(item_node)
+	
+	grid_data[target_coord]["item"] = item_node
