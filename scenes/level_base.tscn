@@ -8,6 +8,6 @@ script = ExtResource("1_548ah")
 [node name="Background" type="ColorRect" parent="." unique_id=1844189815]
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+color = Color(0.83632696, 0.83632696, 0.83632696, 1)
 
-[node name="GridContainer" type="Node2D" parent="." unique_id=12631840]
+[node name="GridContainer" type="GridContainer" parent="." unique_id=813383932]
