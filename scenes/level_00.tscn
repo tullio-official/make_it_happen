@@ -5,4 +5,5 @@
 
 [node name="Level00" unique_id=44808820 instance=ExtResource("1_bvxu8")]
 script = ExtResource("2_2nwr0")
-grid_cols = 3
+grid_rows = 2
+cell_spacing = 30

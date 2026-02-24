@@ -2,12 +2,21 @@
 
 [ext_resource type="Script" uid="uid://by2qql6ritif8" path="res://scripts/level_base.gd" id="1_548ah"]
 
-[node name="LevelBase" type="Node2D" unique_id=44808820]
+[node name="LevelBase" type="Control" unique_id=1137938812]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_548ah")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1844189815]
+layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+color = Color(0.6484881, 0.6484881, 0.6484881, 1)
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=813383932]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1282900429]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 1080.0
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer" unique_id=813383932]
+layout_mode = 2

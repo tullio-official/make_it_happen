@@ -7,9 +7,19 @@ P․A․M․: You were late to your first shift. Interesting choice!
 	P․A․M․: Mhm! Yeah!
 - Um...
 P․A․M․: Well, we should get to work! This is your desk.[do wait(0.25)][do generate_grid()][do wait(0.25)] Or, well, a little diagram of it.
-P․A․M․: And this is your Godputer.[do wait(0.25)][do place_item(load("res://scenes/elements/godputer.tscn").instantiate(), 1, 1)][do wait(0.25)] That's where the magic happens. Literally!
+P․A․M․: And this is your Godputer.[do wait(0.25)][do place_item("res://assets/godputer.svg", 2, 2)][do wait(0.25)] That's where the magic happens. Literally!
 P․A․M․: Right now, I fear the... [i]magic[/i][do wait(0.5)] is definitely in the way.[wait] Try moving it farther away from you, in any of the top cells.
-P․A․M․: Perfect! Look how perfectly far away it is. Huge moment for Big Glasses.
+
+[do enable_grid_interaction()]
+~ wait_for_move
+if is_godputer_at_top() == false
+	[do wait(0.5)]
+	=> wait_for_move
+
+[do disable_grid_interaction()]
+P․A․M․: Perfect! Now we have some space.
+
+P․A․M․: Perfect! Look how perfectly far away it is. Huge moment for Big Glasses™.
 P․A․M․: Would you like a hot drink? Tea? Coffee?
 - Tea, please.
 	P․A․M․: Amazing choice! Here's some tea and some hot water.

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cq5sf6i7ailx4"]
+
+[ext_resource type="Script" uid="uid://d2nutyqvhls0j" path="res://scripts/cell.gd" id="1_upbjj"]
+
+[node name="Cell" type="PanelContainer" unique_id=160307936]
+clip_contents = true
+custom_minimum_size = Vector2(180, 180)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_upbjj")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=194610629]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_mode = 1

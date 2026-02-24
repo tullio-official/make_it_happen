@@ -1,9 +1,11 @@
 extends "res://scripts/level_base.gd"
 
-func _ready() -> void:
-	var dialogue_resource = load("res://dialogues/level_00_dialogue.dialogue")
-	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
-	DialogueManager.show_example_dialogue_balloon(dialogue_resource, "start")
+func _ready():
+	Dialogic.text_signal.connect(_on_dialogic_text_signal)
+	Dialogic.start("res://dialogues/timelines/main_timeline.dtl")
 
-func _on_dialogue_ended(resource: DialogueResource) -> void:
-	pass
+func _on_dialogic_text_signal(argument: String):
+	if argument == "generate_grid":
+		generate_grid()
+	if argument == "spawn_godputer":
+		place_item("res://assets/godputer.svg", 2, 2)

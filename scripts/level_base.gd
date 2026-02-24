@@ -1,68 +1,71 @@
-extends Node2D
+extends Control
 
-@export var grid_cols : int = 2
-@export var grid_rows : int = 2
-@export var cell_size : float = 0.10
-@export var cell_spacing : float = 0.015
-@export var sprite_ratio : float = 0.80
-@export var sprite_native_size : float = 256.0
+# Set up grid variables
+@export var grid_cols := 3
+@export var grid_rows := 3
+@export var cell_size := 180
+@export var cell_spacing := 27
+@export var cell_padding := 30
 
+# Store grid state data
 var grid_data : Dictionary = {}
-var calculated_cell_size : float = 0.0
 
 func _ready() -> void:
+	# Build grid on start
 	generate_grid()
+	place_item("res://assets/godputer.svg", 2, 1)
+	print(grid_data)
 
 func generate_grid() -> void:
-	grid_data.clear()
-	
-	var screen_size : Vector2 = get_viewport_rect().size
-	calculated_cell_size = screen_size.y * cell_size
-	var calculated_cell_spacing : float = screen_size.y * cell_spacing
-	
-	var total_width : float = (grid_cols * calculated_cell_size) + ((grid_cols - 1) * calculated_cell_spacing)
-	var total_height : float = (grid_rows * calculated_cell_size) + ((grid_rows - 1) * calculated_cell_spacing)
-	
-	var start_x : float = (screen_size.x - total_width) / 2.0
-	var start_y : float = (screen_size.y - total_height) / 2.0
-	
+	# Get grid container node
+	var grid = $CenterContainer/GridContainer
+	var cell_scene = preload("res://scenes/cell.tscn")
+
+	# Apply grid layout settings
+	grid.columns = grid_cols
+	grid.add_theme_constant_override("h_separation", cell_spacing)
+	grid.add_theme_constant_override("v_separation", cell_spacing)
+
+	# Loop through rows, columns
 	for y in range(grid_rows):
 		for x in range(grid_cols):
-			var pos_x : float = start_x + (x * (calculated_cell_size + calculated_cell_spacing))
-			var pos_y : float = start_y + (y * (calculated_cell_size + calculated_cell_spacing))
-			var pixel_position : Vector2 = Vector2(pos_x, pos_y)
+			# Spawn new cell instance
+			var cell_instance = cell_scene.instantiate()
+			cell_instance.name = "Cell%dX%dY" % [x + 1, y + 1]
+			cell_instance.custom_minimum_size = Vector2(cell_size, cell_size)
 			
-			var cell_visual := ColorRect.new()
-			cell_visual.size = Vector2(calculated_cell_size, calculated_cell_size)
-			cell_visual.position = pixel_position
-			cell_visual.color = Color("#4A4A4A")
-			add_child(cell_visual)
+			# Assign cell grid data
+			cell_instance.grid_pos = Vector2i(x + 1, y + 1)
+			cell_instance.grid_data_ref = grid_data
 			
-			grid_data[Vector2(x, y)] = {
-				"pixel_position": pixel_position,
-				"item": null
-			}
+			# Add cell to grid
+			grid.add_child(cell_instance)
+			
+			# Create empty dictionary entry
+			grid_data[Vector2i(x + 1, y + 1)] = null
 
-func place_item(item_node, grid_x: int, grid_y: int) -> void:
-	var target_coord := Vector2(grid_x, grid_y)
+func place_item(path:String, x:int, y:int) -> void:
+	# Find target cell node
+	var cell = get_node_or_null("CenterContainer/GridContainer/Cell%dX%dY" % [x, y])
+	if not cell: return
 	
-	if not grid_data.has(target_coord):
-		push_warning("Attempted to place item out of grid bounds.")
-		return
-		
-	if grid_data[target_coord]["item"] != null:
-		push_warning("Target cell is already occupied.")
-		return
-		
-	var cell_top_left : Vector2 = grid_data[target_coord]["pixel_position"]
-	var center_offset := Vector2(calculated_cell_size / 2.0, calculated_cell_size / 2.0)
+	# Get cell texture node
+	var tr = cell.get_node("TextureRect")
+
+	# Load and resize image
+	var tex = load(path)
+	var image = tex.get_image()
+	var target_size = cell_size - cell_padding
+	image.resize(target_size, target_size, Image.INTERPOLATE_LANCZOS)
+
+	# Create the final texture
+	tex = ImageTexture.create_from_image(image)
+
+	# Apply texture to cell
+	tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	tr.stretch_mode = TextureRect.STRETCH_KEEP_CENTERED
+	tr.texture = tex
 	
-	item_node.position = cell_top_left + center_offset
-	
-	var target_size : float = calculated_cell_size * sprite_ratio
-	var scale_factor : float = target_size / sprite_native_size
-	item_node.scale = Vector2(scale_factor, scale_factor)
-	
-	add_child(item_node)
-	
-	grid_data[target_coord]["item"] = item_node
+	# Save item to data
+	var item = path.get_file().get_basename()
+	grid_data[Vector2i(x, y)] = [item, path]
