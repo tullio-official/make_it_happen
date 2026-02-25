@@ -1,0 +1,18 @@
+[
+	{
+		"inputs": ["matter", "matter"],
+		"outputs": ["gravity"]
+	},
+	{
+		"inputs": ["antimatter", "antimatter"],
+		"outputs": ["gravity"]
+	},
+	{
+		"inputs": ["matter", "antimatter"],
+		"outputs": ["energy", "vacuum"]
+	},
+	{
+		"inputs": ["hot_water_cup", "tea_bag"],
+		"outputs": ["tea_cup"]
+	}
+]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfreg3g0dptab"
-path="res://.godot/imported/teabag.svg-4b91e7235c16465629bd0adcc8a5ca6c.ctex"
+uid="uid://wdgxnb5nwtgw"
+path="res://.godot/imported/petunia@4x.png-8785b6a7e12ce1eb89f6084b7d61d014.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/teabag.svg"
-dest_files=["res://.godot/imported/teabag.svg-4b91e7235c16465629bd0adcc8a5ca6c.ctex"]
+source_file="res://assets/petunia@4x.png"
+dest_files=["res://.godot/imported/petunia@4x.png-8785b6a7e12ce1eb89f6084b7d61d014.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

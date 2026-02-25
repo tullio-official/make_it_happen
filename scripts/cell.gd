@@ -2,42 +2,37 @@ extends PanelContainer
 
 signal item_dropped(position: Vector2i, item_name: String)
 
-var grid_pos : Vector2i
-var grid_data_ref : Dictionary
+var grid_pos: Vector2i
+var grid_data_ref: Dictionary
+var level_ref: Control
 
 func _get_drag_data(at_position: Vector2) -> Variant:
-	var item_info = grid_data_ref[grid_pos]
+	var item_info: Variant = grid_data_ref.get(grid_pos)
 	
-	# Abort if cell empty
 	if item_info == null:
 		return null
 		
-	# Package data for drop
-	var payload = {
+	var payload: Dictionary = {
 		"start_pos": grid_pos,
-		"item_name": item_info[0],
-		"item_path": item_info[1],
+		"item_name": item_info["name"],
+		"item_path": item_info["path"],
 		"texture": $TextureRect.texture
 	}
 	
-	# Create drag visual preview
-	var preview = TextureRect.new()
+	var preview := TextureRect.new()
 	preview.texture = payload["texture"]
 	preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	preview.custom_minimum_size = Vector2(150, 150)
 	
-	# Center preview on cursor
 	preview.position = Vector2(-60, -60)
 	
-	# Anchor preview to cursor
-	var preview_anchor = Control.new()
+	var preview_anchor := Control.new()
 	preview_anchor.add_child(preview)
 	set_drag_preview(preview_anchor)
 	
 	return payload
 
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
-	# Validate incoming drop data
 	if typeof(data) == TYPE_DICTIONARY:
 		if data.has("start_pos") and data.has("item_name"):
 			return true
@@ -45,21 +40,39 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	return false
 
 func _drop_data(at_position: Vector2, data: Variant) -> void:
-	# Ignore drop on self
 	if grid_pos == data["start_pos"]:
 		return
 
-	# Find origin cell node
-	var origin_cell_name = "Cell%dX%dY" % [data["start_pos"].x, data["start_pos"].y]
-	var origin_cell = get_parent().get_node(origin_cell_name)
-
-	# Update visual textures
-	$TextureRect.texture = data["texture"]
-	origin_cell.get_node("TextureRect").texture = null
-
-	# Update backend grid data
-	grid_data_ref[grid_pos] = [data["item_name"], data["item_path"]]
-	grid_data_ref[data["start_pos"]] = null
+	var origin_cell_name := "Cell%dX%dY" % [data["start_pos"].x, data["start_pos"].y]
+	var origin_cell: Control = get_parent().get_node(origin_cell_name)
 	
-	# Emit grid update signal
-	item_dropped.emit(grid_pos, data["item_name"])
+	var target_item_info: Variant = grid_data_ref.get(grid_pos)
+
+	if target_item_info == null:
+		$TextureRect.texture = data["texture"]
+		origin_cell.get_node("TextureRect").texture = null
+
+		grid_data_ref[grid_pos] = {
+			"name": data["item_name"],
+			"path": data["item_path"]
+		}
+		grid_data_ref[data["start_pos"]] = null
+		
+		item_dropped.emit(grid_pos, data["item_name"])
+	else:
+		var dragged_item: String = data["item_name"]
+		var target_item: String = target_item_info["name"]
+		var outputs: Array = level_ref.check_combination(dragged_item, target_item)
+		
+		if outputs.size() > 0:
+			origin_cell.get_node("TextureRect").texture = null
+			grid_data_ref[data["start_pos"]] = null
+			
+			level_ref.place_item(outputs[0], grid_pos.x, grid_pos.y)
+			
+			if outputs.size() > 1:
+				level_ref.place_item(outputs[1], data["start_pos"].x, data["start_pos"].y)
+				
+			item_dropped.emit(grid_pos, outputs[0])
+		else:
+			return

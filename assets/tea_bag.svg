@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="tea_bag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f5daa7;
+      }
+
+      .cls-2 {
+        fill: #b58878;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #eee;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+
+      .cls-4 {
+        fill: #eee;
+      }
+
+      .cls-5 {
+        fill: #d3b3a9;
+      }
+    </style>
+  </defs>
+  <path class="cls-4" d="M192,200h-8v-120c0-24.26-19.74-44-44-44s-44,19.74-44,44h-8c0-28.67,23.33-52,52-52s52,23.33,52,52v120Z"/>
+  <line class="cls-3" x1="92" y1="80" x2="92" y2="92"/>
+  <circle class="cls-1" cx="188" cy="200" r="24"/>
+  <rect class="cls-5" x="44" y="128" width="96" height="48"/>
+  <rect class="cls-2" x="44" y="176" width="96" height="48"/>
+  <circle class="cls-5" cx="92" cy="128" r="48"/>
+  <circle class="cls-2" cx="92" cy="176" r="48"/>
+</svg>

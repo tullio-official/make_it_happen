@@ -11,7 +11,7 @@ script = ExtResource("1_548ah")
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0.6484881, 0.6484881, 0.6484881, 1)
+color = Color(0.30544603, 0.30544633, 0.30544585, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1282900429]
 layout_mode = 0
