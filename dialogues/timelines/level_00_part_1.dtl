@@ -1,0 +1,24 @@
+PAM: Hi there![pause=0.3] I am your Planetary Administration Module,[pause=0.3] but you can call me P.A.M.
+PAM: Fun fact![pause=0.5] You are exactly twelve minutes late to your first shift!
+- Thanks! :D
+	PAM: You are very welcome!
+- Sorry, I got stuck in traffic.
+	PAM: There is no traffic here![pause=0.3] Or cars.[pause=0.5] I can make you a car if you want to sit in it and not move.
+- Where am I?
+	PAM: You are right here!
+PAM: Anyway, let us get to work![pause=0.3] Here is a diagram of your desk.[pause=0.3][signal=generate_grid]
+PAM: It is perfectly optimized for eternal productivity!
+- Fun!
+	PAM: Exactly!
+- I... guess?
+	PAM: Your heart rate indicates mild dissatisfaction.[pause=0.5] Would you like a decoration?[pause=0.5] I can provide a freshly cut flower.
+	- That would be great!
+		PAM: Here you go![pause=0.3] It is a petunia.[pause=0.3] Please do not eat it.
+	- Maybe later.
+		PAM: Okay![pause=0.5] I will dissolve the flower.
+- Eternal? Am i a... god?
+	PAM: Not exactly![pause=0.5] You are an eternal being of immense cosmic power,[pause=0.3] but "god" is a human concept with a lot of messy baggage.
+	PAM: Fun fact![pause=0.5] Baggage here is completely literal and very heavy.
+PAM: Here is your Godputer![pause=0.3][signal=place_item\:godputer\:2\:2][pause=0.3] That is where the magic happens. Literally!
+PAM: Right now,[pause=0.3] the magic is physically blocking your spatial orientation.
+PAM: Please move it farther away from you into any of the cells in the top row so you do not get atomized![pause=0.8] Yay!

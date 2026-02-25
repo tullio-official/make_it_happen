@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Make it happen."
+run/main_scene="uid://dh4tvysfbx0ad"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -21,10 +22,11 @@ Dialogic="*uid://ds2q0uclmolvu"
 [dialogic]
 
 directories/dch_directory={
-"pam": "res://dialogues/characters/pam.dch"
+"PAM": "res://dialogues/characters/PAM.dch"
 }
 directories/dtl_directory={
-"main_timeline": "res://dialogues/timelines/main_timeline.dtl"
+"level_00_part_1": "res://dialogues/timelines/level_00_part_1.dtl",
+"level_00_part_2": "res://dialogues/timelines/level_00_part_2.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true
@@ -67,6 +69,8 @@ text/absolute_autopauses=false
 text/autoadvance_enabled=false
 text/input_action="dialogic_default_action"
 variables={}
+layout/style_list=[]
+layout/default_style="Default"
 
 [display]
 

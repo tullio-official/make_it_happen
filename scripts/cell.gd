@@ -1,5 +1,7 @@
 extends PanelContainer
 
+signal item_dropped(position: Vector2i, item_name: String)
+
 var grid_pos : Vector2i
 var grid_data_ref : Dictionary
 
@@ -58,3 +60,6 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	# Update backend grid data
 	grid_data_ref[grid_pos] = [data["item_name"], data["item_path"]]
 	grid_data_ref[data["start_pos"]] = null
+	
+	# Emit grid update signal
+	item_dropped.emit(grid_pos, data["item_name"])
