@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtprdhchrau1c"
-path="res://.godot/imported/godputer.svg-3347d82b6dc2273d37fa1b6e3aac3158.ctex"
+uid="uid://b5fb5i7m6pei"
+path="res://.godot/imported/hotwater.svg-820b5edea5726b6c8dd6d1d56f5f2e8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/godputer.svg"
-dest_files=["res://.godot/imported/godputer.svg-3347d82b6dc2273d37fa1b6e3aac3158.ctex"]
+source_file="res://assets/hotwater.svg"
+dest_files=["res://.godot/imported/hotwater.svg-820b5edea5726b6c8dd6d1d56f5f2e8e.ctex"]
 
 [params]
 

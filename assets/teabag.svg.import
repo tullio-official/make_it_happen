@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtprdhchrau1c"
-path="res://.godot/imported/godputer.svg-3347d82b6dc2273d37fa1b6e3aac3158.ctex"
+uid="uid://cfreg3g0dptab"
+path="res://.godot/imported/teabag.svg-4b91e7235c16465629bd0adcc8a5ca6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/godputer.svg"
-dest_files=["res://.godot/imported/godputer.svg-3347d82b6dc2273d37fa1b6e3aac3158.ctex"]
+source_file="res://assets/teabag.svg"
+dest_files=["res://.godot/imported/teabag.svg-4b91e7235c16465629bd0adcc8a5ca6c.ctex"]
 
 [params]
 

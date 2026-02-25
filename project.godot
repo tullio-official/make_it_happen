@@ -50,7 +50,10 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autocolor_names=false
 choices/hotkey_behaviour=0
-text/autopauses={}
+text/autopauses={
+",:;": 0.2,
+"?!.": 0.4
+}
 audio/channel_defaults={
 "": {
 "audio_bus": "",
@@ -71,6 +74,7 @@ text/input_action="dialogic_default_action"
 variables={}
 layout/style_list=[]
 layout/default_style="Default"
+text/autoskip_time_per_event=0.1
 
 [display]
 

@@ -1,1 +1,9 @@
-PAM: Well done!
+PAM: Perfectly executed! Look at all this space. It is the absolute optimal amount of room for our activities.
+PAM: Before we begin, can I get you a hot beverage? I am currently offering tea, coffee, or whatever else you might want!
+- Tea, please.
+	PAM: Excellent choice. I have provided a mug of perfectly heated water and a single teabag just for you.[signal=place_item\:hotwater\:1\:2][signal=place_item\:teabag\:3\:2]
+- Coffee, please.
+	PAM: Fun fact! I do not actually have any coffee. I only have tea! Here is a mug of hot water and a teabag instead. Enjoy![signal=place_item\:hotwater\:1\:2][signal=place_item\:teabag\:3\:2]
+- I don't really like either of those...
+	PAM: I completely understand! However, my beverage manifestation protocol is only outputting tea today. Please accept this mug of hot water and a teabag![signal=place_item\:hotwater\:1\:2][signal=place_item\:teabag\:3\:2]
+PAM: Now, you simply need to submerge the teabag into the water. It is a very popular way to interact with liquid!

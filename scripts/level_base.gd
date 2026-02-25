@@ -81,7 +81,7 @@ func place_item(item:String, x:int, y:int) -> void:
 	# Save item to data
 	grid_data[Vector2i(x, y)] = [item, path]
 
-## Runs string signals as functions. Separate function and arguments with colons ":".
+## Runs string signals as functions. Separate function and arguments with colons "\:".
 func _on_dialogic_text_signal(argument_string: String):
 	var parts = Array(argument_string.split(":"))
 	var action_name = parts.pop_front()
