@@ -123,7 +123,6 @@ func _apply_export_overrides() -> void:
 	## FONT SETTINGS
 	_apply_text_settings()
 
-
 	## BOX SETTINGS
 	_apply_box_settings()
 

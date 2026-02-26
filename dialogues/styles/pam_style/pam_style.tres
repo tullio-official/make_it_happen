@@ -60,7 +60,7 @@ script = ExtResource("2_w6j1i")
 scene = ExtResource("11_sisxs")
 overrides = {
 "box_size": "Vector2(608, 450)",
-"next_indicator_enabled": "false",
+"next_indicator_animation": "1",
 "next_indicator_size": "Vector2(24, 24)",
 "next_indicator_texture": "\"res://dialogues/styles/pam_style/assets/pam_style_next_indicator.svg\""
 }

@@ -89,10 +89,9 @@ func play_animation(current_animation: int, time:float) -> void:
 			tween.tween_property(self, 'position', - Vector2(0,distance), time*0.3).as_relative()
 		Animations.BLINK:
 			tween = (create_tween() as Tween)
-			tween.set_parallel(false)
-			tween.set_trans(Tween.TRANS_SINE)
-			tween.set_ease(Tween.EASE_IN_OUT)
 			tween.set_loops()
 
-			tween.tween_property(self, 'modulate:a', 0, time*0.3)
-			tween.tween_property(self, 'modulate:a', 1, time*0.3)
+			tween.tween_property(self, 'modulate:a', 0.0, 0.0)
+			tween.tween_interval(0.5)
+			tween.tween_property(self, 'modulate:a', 1.0, 0.0)
+			tween.tween_interval(0.5)

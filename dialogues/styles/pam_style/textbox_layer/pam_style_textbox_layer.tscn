@@ -10,7 +10,7 @@
 [ext_resource type="FontFile" uid="uid://by8obf6xmfvcl" path="res://assets/fonts/Josefin/JosefinSans-Bold.ttf" id="6_ps10s"]
 [ext_resource type="FontFile" uid="uid://do8h2ppjepdin" path="res://assets/fonts/Josefin/JosefinSans-BoldItalic.ttf" id="7_iijii"]
 [ext_resource type="Script" uid="uid://dve1vwse2peji" path="res://addons/dialogic/Modules/Text/node_next_indicator.gd" id="7_kkyqq"]
-[ext_resource type="Texture2D" uid="uid://cv84f2dfnhwto" path="res://dialogues/styles/pam_style/textbox_layer/next.svg" id="8_fyst4"]
+[ext_resource type="Texture2D" uid="uid://bwvi45dl3vik6" path="res://dialogues/styles/pam_style/textbox_layer/next.svg" id="8_fyst4"]
 [ext_resource type="FontFile" uid="uid://wqvrrl8g5mld" path="res://assets/fonts/Josefin/JosefinSans-MediumItalic.ttf" id="8_r8e27"]
 [ext_resource type="Script" uid="uid://lbbx01bf6m01" path="res://dialogues/styles/pam_style/textbox_layer/autoadvance_indicator.gd" id="9_jr7wx"]
 [ext_resource type="StyleBox" uid="uid://bnpfam5q0k22x" path="res://dialogues/styles/pam_style/textbox_layer/pam_style_name_label_panel.tres" id="10_mrn7r"]
@@ -285,6 +285,21 @@ grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
 
+[node name="NextIndicator" type="Control" parent="Anchor/AnimationParent/Sizer" unique_id=1802926810]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 608.0
+offset_top = -50.0
+offset_right = 608.0
+offset_bottom = -50.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_filter = 2
+script = ExtResource("7_kkyqq")
+show_on_questions = true
+texture = ExtResource("8_fyst4")
+metadata/_edit_layout_mode = 1
+
 [node name="DialogTextPanel" type="PanelContainer" parent="Anchor/AnimationParent/Sizer" unique_id=2078674945]
 unique_name_in_owner = true
 self_modulate = Color(0.00784314, 0.00784314, 0.00784314, 0.843137)
@@ -318,17 +333,6 @@ textbox_root = NodePath("..")
 unique_name_in_owner = true
 script = ExtResource("6_kos76")
 play_every_character = 0
-
-[node name="NextIndicator" type="Control" parent="Anchor/AnimationParent/Sizer/DialogTextPanel" unique_id=1802926810]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-mouse_filter = 2
-script = ExtResource("7_kkyqq")
-show_on_questions = true
-texture = ExtResource("8_fyst4")
-metadata/_edit_layout_mode = 1
 
 [node name="AutoAdvanceProgressbar" type="ProgressBar" parent="Anchor/AnimationParent/Sizer/DialogTextPanel" unique_id=194993574]
 unique_name_in_owner = true
