@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcc0u4hnj2lq8"
-path="res://.godot/imported/antimatter@4x.png-31b24a90af923c6ba01aa7d08afab061.ctex"
+uid="uid://dmul31bhe1qv3"
+path="res://.godot/imported/heat.png-81b88c268a182ed6cd14c6c45e04fa3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/antimatter@4x.png"
-dest_files=["res://.godot/imported/antimatter@4x.png-31b24a90af923c6ba01aa7d08afab061.ctex"]
+source_file="res://assets/heat.png"
+dest_files=["res://.godot/imported/heat.png-81b88c268a182ed6cd14c6c45e04fa3d.ctex"]
 
 [params]
 

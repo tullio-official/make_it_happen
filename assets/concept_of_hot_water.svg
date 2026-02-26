@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="concept_of_hot_water" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f5daa7;
+      }
+
+      .cls-2 {
+        fill: #85daeb;
+      }
+
+      .cls-3 {
+        fill: #5fc9e7;
+      }
+
+      .cls-4 {
+        fill: #eee;
+      }
+
+      .cls-5 {
+        fill: #5fa1e7;
+      }
+    </style>
+  </defs>
+  <rect class="cls-5" y="200" width="192" height="56"/>
+  <rect class="cls-2" x="64" y="144" width="192" height="56"/>
+  <rect class="cls-3" x="32" y="88" width="192" height="56"/>
+  <path class="cls-1" d="M104,16c-26.51,0-48,21.49-48,48h96c0-26.51-21.49-48-48-48Z"/>
+  <polygon class="cls-4" points="184 20.29 168 48 200 48 184 20.29"/>
+  <polygon class="cls-4" points="160 27.71 144 0 176 0 160 27.71"/>
+</svg>

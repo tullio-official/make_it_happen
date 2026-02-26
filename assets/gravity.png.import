@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ly13e7d2lw7x"
-path="res://.godot/imported/heat@4x.png-be20ee5765529df494b852bf7a850ddb.ctex"
+uid="uid://b2s0r822yo1ga"
+path="res://.godot/imported/gravity.png-49d85beb859f82c62f902d61a1992d35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/heat@4x.png"
-dest_files=["res://.godot/imported/heat@4x.png-be20ee5765529df494b852bf7a850ddb.ctex"]
+source_file="res://assets/gravity.png"
+dest_files=["res://.godot/imported/gravity.png-49d85beb859f82c62f902d61a1992d35.ctex"]
 
 [params]
 

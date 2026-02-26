@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://188bms50w8d4"
-path="res://.godot/imported/hot_water_cup.svg-3eea90a69d77c47e688b717924c6607f.ctex"
+uid="uid://2mq0p2vokskn"
+path="res://.godot/imported/cold.png-b534bc5483561d217823bc0443f4e581.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hot_water_cup.svg"
-dest_files=["res://.godot/imported/hot_water_cup.svg-3eea90a69d77c47e688b717924c6607f.ctex"]
+source_file="res://assets/cold.png"
+dest_files=["res://.godot/imported/cold.png-b534bc5483561d217823bc0443f4e581.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

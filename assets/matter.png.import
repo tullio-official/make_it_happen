@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://es0jk2s2mppe"
-path="res://.godot/imported/hot_water_cup@4x.png-b909cb21c4c6eb5c558a3b874b6e28a3.ctex"
+uid="uid://dbox5mpyo2lls"
+path="res://.godot/imported/matter.png-d9072ff094558ff00113bb738e51e9d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hot_water_cup@4x.png"
-dest_files=["res://.godot/imported/hot_water_cup@4x.png-b909cb21c4c6eb5c558a3b874b6e28a3.ctex"]
+source_file="res://assets/matter.png"
+dest_files=["res://.godot/imported/matter.png-d9072ff094558ff00113bb738e51e9d8.ctex"]
 
 [params]
 

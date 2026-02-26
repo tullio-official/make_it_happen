@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfoimdgum82d"
-path="res://.godot/imported/.palette.png-030b127ecbe085d55e3cb725b83d056e.ctex"
+uid="uid://cfikue0xkjus4"
+path="res://.godot/imported/petunia.png-8bfec61387edd02f8dd5934c9462beb5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/.palette.png"
-dest_files=["res://.godot/imported/.palette.png-030b127ecbe085d55e3cb725b83d056e.ctex"]
+source_file="res://assets/petunia.png"
+dest_files=["res://.godot/imported/petunia.png-8bfec61387edd02f8dd5934c9462beb5.ctex"]
 
 [params]
 

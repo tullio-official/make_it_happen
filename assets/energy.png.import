@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cexgeopur3ack"
-path="res://.godot/imported/gravity@4x.png-3bff8c398eacef9e9d2d0fb35a38e628.ctex"
+uid="uid://kdf73oj0xuyj"
+path="res://.godot/imported/energy.png-d31ae10deb2f267a25814b3eac80d643.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gravity@4x.png"
-dest_files=["res://.godot/imported/gravity@4x.png-3bff8c398eacef9e9d2d0fb35a38e628.ctex"]
+source_file="res://assets/energy.png"
+dest_files=["res://.godot/imported/energy.png-d31ae10deb2f267a25814b3eac80d643.ctex"]
 
 [params]
 

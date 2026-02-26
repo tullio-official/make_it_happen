@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhauiujaet3nr"
-path="res://.godot/imported/cold@4x.png-146bf4abf2f3b5ef063f17d3279ad6ab.ctex"
+uid="uid://b3voi173jux25"
+path="res://.godot/imported/concept_of_hot_water.png-31c042e164855ff58625bd01a4634193.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cold@4x.png"
-dest_files=["res://.godot/imported/cold@4x.png-146bf4abf2f3b5ef063f17d3279ad6ab.ctex"]
+source_file="res://assets/concept_of_hot_water.png"
+dest_files=["res://.godot/imported/concept_of_hot_water.png-31c042e164855ff58625bd01a4634193.ctex"]
 
 [params]
 

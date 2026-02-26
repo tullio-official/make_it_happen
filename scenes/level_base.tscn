@@ -6,6 +6,7 @@
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_548ah")
+cell_padding = 20
 
 [node name="Background" type="ColorRect" parent="." unique_id=1844189815]
 layout_mode = 0

@@ -12,7 +12,7 @@
 		"outputs": ["energy", "vacuum"]
 	},
 	{
-		"inputs": ["hot_water_cup", "tea_bag"],
-		"outputs": ["tea_cup"]
+		"inputs": ["concept_of_hot_water", "tea_bag"],
+		"outputs": ["concept_of_tea"]
 	}
 ]

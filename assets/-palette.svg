@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="palette" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5d4776;
+      }
+
+      .cls-2 {
+        fill: #4593a5;
+      }
+
+      .cls-3 {
+        fill: #f5daa7;
+      }
+
+      .cls-4 {
+        fill: #85daeb;
+      }
+
+      .cls-5 {
+        fill: #4ab9a3;
+      }
+
+      .cls-6 {
+        fill: #463c5e;
+      }
+
+      .cls-7 {
+        fill: #f3a787;
+      }
+
+      .cls-8 {
+        fill: #ca60ae;
+      }
+
+      .cls-9 {
+        fill: #444774;
+      }
+
+      .cls-10 {
+        fill: #855395;
+      }
+
+      .cls-11 {
+        fill: #f288a1;
+      }
+
+      .cls-12 {
+        fill: #5dc190;
+      }
+
+      .cls-13 {
+        fill: #5fc9e7;
+      }
+
+      .cls-14 {
+        fill: #5f6ee7;
+      }
+
+      .cls-15 {
+        fill: #e55353;
+      }
+
+      .cls-16 {
+        fill: #eee;
+      }
+
+      .cls-17 {
+        fill: #ffcada;
+      }
+
+      .cls-18 {
+        fill: #5fa1e7;
+      }
+
+      .cls-19 {
+        fill: #32313b;
+      }
+
+      .cls-20 {
+        fill: #ab58a8;
+      }
+
+      .cls-21 {
+        fill: #4c60aa;
+      }
+
+      .cls-22 {
+        fill: #8dd894;
+      }
+    </style>
+  </defs>
+  <rect class="cls-3" width="32" height="32"/>
+  <rect class="cls-7" x="32" width="32" height="32"/>
+  <rect class="cls-15" x="64" width="32" height="32"/>
+  <rect class="cls-10" x="64" y="96" width="32" height="32"/>
+  <rect class="cls-1" x="96" y="96" width="32" height="32"/>
+  <rect class="cls-6" x="128" y="96" width="32" height="32"/>
+  <rect class="cls-17" x="0" y="128" width="32" height="32"/>
+  <rect class="cls-11" x="32" y="128" width="32" height="32"/>
+  <rect class="cls-16" x="0" y="160" width="32" height="32"/>
+  <rect class="cls-19" x="32" y="160" width="32" height="32"/>
+  <rect class="cls-21" x="128" y="64" width="32" height="32"/>
+  <rect class="cls-9" x="160" y="64" width="32" height="32"/>
+  <rect class="cls-8" y="96" width="32" height="32"/>
+  <rect class="cls-20" x="32" y="96" width="32" height="32"/>
+  <rect class="cls-22" y="32" width="32" height="32"/>
+  <rect class="cls-12" x="32" y="32" width="32" height="32"/>
+  <rect class="cls-5" x="64" y="32" width="32" height="32"/>
+  <rect class="cls-2" x="96" y="32" width="32" height="32"/>
+  <rect class="cls-4" x="0" y="64" width="32" height="32"/>
+  <rect class="cls-13" x="32" y="64" width="32" height="32"/>
+  <rect class="cls-18" x="64" y="64" width="32" height="32"/>
+  <rect class="cls-14" x="96" y="64" width="32" height="32"/>
+</svg>

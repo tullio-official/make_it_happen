@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="dust" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f5daa7;
+      }
+
+      .cls-2 {
+        fill: #b58878;
+      }
+
+      .cls-3 {
+        fill: #f3a787;
+      }
+
+      .cls-4 {
+        fill: #ffcada;
+      }
+
+      .cls-5 {
+        fill: #d3b3a9;
+      }
+    </style>
+  </defs>
+  <path class="cls-5" d="M98.09,166.44c11.54,6.53,26.18,2.47,32.71-9.07l-41.77-23.64c-6.53,11.54-2.47,26.18,9.07,32.71Z"/>
+  <path class="cls-1" d="M129.43,76.34c-10.86-7.6-25.82-4.97-33.43,5.89l39.32,27.54c7.6-10.86,4.97-25.82-5.89-33.43Z"/>
+  <path class="cls-3" d="M126.24,8.88c-8.35,10.3-6.77,25.41,3.53,33.76l30.23-37.28c-10.3-8.35-25.41-6.77-33.76,3.53Z"/>
+  <path class="cls-2" d="M43.25,32c-11.23,7.04-14.63,21.85-7.59,33.08l20.33-12.75-12.75-20.33Z"/>
+  <path class="cls-4" d="M223.25,56c-11.23,7.04-14.63,21.85-7.59,33.08l20.33-12.75-12.75-20.33Z"/>
+  <path class="cls-3" d="M164.09,136c-7.4,10.99-4.5,25.91,6.5,33.31l13.41-19.91-19.91-13.41Z"/>
+  <path class="cls-2" d="M52.09,72c-7.4,10.99-4.5,25.91,6.5,33.31l13.41-19.91-19.91-13.41Z"/>
+  <path class="cls-2" d="M62.08,232.38c9.05,9.69,24.23,10.21,33.92,1.17l-16.38-17.54-17.54,16.38Z"/>
+  <path class="cls-5" d="M190.08,124.38c9.05,9.69,24.23,10.21,33.92,1.17l-16.38-17.54-17.54,16.38Z"/>
+  <path class="cls-5" d="M178.87,18.65l-2.87,23.83,23.83,2.87c1.59-13.16-7.8-25.11-20.96-26.7Z"/>
+  <path class="cls-2" d="M236.83,176c12.98-2.67,21.34-15.36,18.67-28.34l-23.51,4.84,4.84,23.51Z"/>
+  <circle class="cls-2" cx="64" cy="136" r="12"/>
+  <circle class="cls-4" cx="172" cy="108" r="12"/>
+  <circle class="cls-5" cx="28" cy="188" r="12"/>
+  <circle class="cls-3" cx="208" cy="164" r="12"/>
+  <circle class="cls-3" cx="108" cy="48" r="12"/>
+  <circle class="cls-5" cx="120" cy="244" r="12"/>
+  <rect class="cls-3" x="129.18" y="188.25" width="40" height="16" transform="translate(-35.45 32.91) rotate(-11.26)"/>
+  <rect class="cls-5" x="-9.05" y="84" width="40" height="16" transform="translate(100.21 67.16) rotate(81.24)"/>
+  <rect class="cls-3" x="225.05" y="108.99" width="40" height="16" transform="translate(323.33 -143.02) rotate(81.24)"/>
+  <rect class="cls-2" x="150.73" y="220.18" width="40" height="16" transform="translate(54.04 -31.82) rotate(12.63)"/>
+  <rect class="cls-4" x="57.27" y="184" width="40" height="16" transform="translate(43.87 -12.25) rotate(12.63)"/>
+  <polygon class="cls-4" points="229.66 199.01 201.44 214.11 186.34 185.89 229.66 199.01"/>
+  <polygon class="cls-5" points="104 9.63 81.12 32 58.75 9.12 104 9.63"/>
+  <polygon class="cls-5" points="157.25 125.07 134.37 147.44 112 124.56 157.25 125.07"/>
+  <polygon class="cls-4" points="41.93 147.55 12.45 160 0 130.52 41.93 147.55"/>
+  <polygon class="cls-1" points="197.23 57.62 173.8 79.43 152 56 197.23 57.62"/>
+</svg>

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wdgxnb5nwtgw"
-path="res://.godot/imported/petunia@4x.png-8785b6a7e12ce1eb89f6084b7d61d014.ctex"
+uid="uid://ciwqurbcl6ora"
+path="res://.godot/imported/concept_of_tea.png-490bea50d601b258440f273b7c1fec72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/petunia@4x.png"
-dest_files=["res://.godot/imported/petunia@4x.png-8785b6a7e12ce1eb89f6084b7d61d014.ctex"]
+source_file="res://assets/concept_of_tea.png"
+dest_files=["res://.godot/imported/concept_of_tea.png-490bea50d601b258440f273b7c1fec72.ctex"]
 
 [params]
 
