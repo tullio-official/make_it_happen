@@ -24,9 +24,7 @@ offset_bottom = 1080.0
 [node name="GridContainer" type="GridContainer" parent="CenterContainer" unique_id=813383932]
 layout_mode = 2
 
-[node name="Petunia" type="Sprite2D" parent="." unique_id=1040379318]
+[node name="Petunia" type="Sprite2D" parent="CenterContainer/GridContainer" unique_id=1040379318]
 visible = false
-position = Vector2(784, 316)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_osu2p")
-centered = false

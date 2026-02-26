@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cmhvog2eqgksd"]
+
+[ext_resource type="FontFile" uid="uid://wqvrrl8g5mld" path="res://assets/fonts/Josefin/JosefinSans-MediumItalic.ttf" id="1_ndijf"]
+[ext_resource type="Texture2D" uid="uid://2cqss1oysk0l" path="res://assets/dialogue_indicator.svg" id="2_f2rgi"]
+
+[node name="ChoiceButton" type="Button" unique_id=152207569]
+offset_right = 600.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0.19607843, 0.19215687, 0.23137255, 1)
+theme_override_colors/font_focus_color = Color(0.68500525, 0.927826, 3.85046e-07, 1)
+theme_override_colors/font_pressed_color = Color(0.3882353, 0.38431373, 0.4509804, 1)
+theme_override_colors/font_hover_color = Color(0.19607843, 0.19215687, 0.23137255, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.19607843, 0.19215687, 0.23137255, 1)
+theme_override_fonts/font = ExtResource("1_ndijf")
+theme_override_font_sizes/font_size = 36
+text = "Button Sample Text"
+flat = true
+alignment = 0
+
+[node name="ButtonIndicator" type="TextureRect" parent="." unique_id=1427263495]
+modulate = Color(0.19607843, 0.19215687, 0.23137255, 1)
+layout_mode = 0
+offset_left = -28.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = 28.0
+texture = ExtResource("2_f2rgi")
+expand_mode = 1

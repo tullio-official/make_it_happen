@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Dialogic="*uid://ds2q0uclmolvu"
+DialogueSystem="*uid://bmbn8vvx4st80"
 
 [dialogic]
 
@@ -89,14 +89,9 @@ window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
-
 [file_customization]
 
 folder_colors={
-"res://addons/": "gray",
 "res://assets/": "pink",
 "res://data/": "teal",
 "res://dialogues/": "yellow",

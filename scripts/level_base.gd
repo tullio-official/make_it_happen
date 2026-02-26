@@ -20,13 +20,7 @@ var grid_data: Dictionary = {}
 var recipe_db: Array = []
 
 func _ready() -> void:
-	load_recipes()
-	generate_grid()
-	place_item("concept_of_hot_water", 1, 1)
-	place_item("tea_bag", 1, 2)
-	
-	await concept_of_tea_mixed
-	print("mixed :3")
+	DialogueSystem.start_dialogue("res://dialogues/timelines/level_00_part_1.txt")
 
 ## Generates an empty X by Y grid based on the export variables and initializes grid_data.
 func generate_grid() -> void:
@@ -100,39 +94,6 @@ func place_item(item_name: String, x: int, y: int) -> void:
 		"path": file_path
 	}
 
-## Parses a string signal from Dialogic and calls the corresponding function.
-## Signal format should be "function_name\:arg1\:arg2\:arg3\:arg4...".
-func _on_dialogic_text_signal(argument_string: String) -> void:
-	# Split the string into an array using the colon separator
-	var parts := argument_string.split(":")
-	var action_name := parts[0]
-	
-	# Remove the function name so only arguments remain
-	parts.remove_at(0)
-	
-	var typed_args: Array = []
-	
-	# Convert string arguments into their proper data types
-	for arg: String in parts:
-		if arg.is_valid_int():
-			typed_args.append(arg.to_int())
-		elif arg.is_valid_float():
-			typed_args.append(arg.to_float())
-		elif arg.to_lower() == "true":
-			typed_args.append(true)
-		elif arg.to_lower() == "false":
-			typed_args.append(false)
-		else:
-			# Leave as a string if it doesn't match numbers or booleans
-			typed_args.append(arg)
-	
-	# Create a dynamic reference to the function on this script
-	var dynamic_callable := Callable(self, action_name)
-	
-	# Execute the function with the converted arguments if it exists
-	if dynamic_callable.is_valid():
-		dynamic_callable.callv(typed_args)
-
 ## Reads the recipes.json file and stores its contents in the recipe_db array.
 func load_recipes() -> void:
 	var file_path := "res://data/recipes.json"
@@ -167,4 +128,5 @@ func check_combination(item1: String, item2: String) -> Array:
 	return []
 
 func show_petunia(is_visible: bool):
-	$Petunia.visible = is_visible
+	print("flowie :3")
+	$CenterContainer/GridContainer/Petunia.visible = is_visible

@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://bmbn8vvx4st80"]
+
+[ext_resource type="Script" uid="uid://csujm8lbx3ifp" path="res://scripts/dialogue_ui.gd" id="1_wlc0t"]
+[ext_resource type="FontFile" uid="uid://wwmt8sixmxsg" path="res://assets/fonts/Fascinate/Fascinate-Regular.ttf" id="2_x1ric"]
+[ext_resource type="FontFile" uid="uid://d35gmow4ow0rw" path="res://assets/fonts/Josefin/JosefinSans-Medium.ttf" id="3_ecd83"]
+[ext_resource type="FontFile" uid="uid://by8obf6xmfvcl" path="res://assets/fonts/Josefin/JosefinSans-Bold.ttf" id="4_rn5aw"]
+[ext_resource type="FontFile" uid="uid://do8h2ppjepdin" path="res://assets/fonts/Josefin/JosefinSans-BoldItalic.ttf" id="5_8oo06"]
+[ext_resource type="FontFile" uid="uid://wqvrrl8g5mld" path="res://assets/fonts/Josefin/JosefinSans-MediumItalic.ttf" id="6_hypas"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lsk26"]
+font = ExtResource("2_x1ric")
+font_size = 48
+font_color = Color(0.8980392, 0.3254902, 0.3254902, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=293953507]
+layer = 100
+script = ExtResource("1_wlc0t")
+
+[node name="BG" type="ColorRect" parent="." unique_id=684891293]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.93333334, 0.93333334, 0.93333334, 1)
+
+[node name="DialogueUI" type="Control" parent="." unique_id=742501554]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogueUI" unique_id=1153564750]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 224.0
+offset_right = 728.0
+offset_bottom = 288.0
+text = "P.A.M."
+label_settings = SubResource("LabelSettings_lsk26")
+vertical_alignment = 2
+
+[node name="DialogueText" type="RichTextLabel" parent="DialogueUI" unique_id=1095420150]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 320.0
+offset_right = 728.0
+offset_bottom = 443.0
+theme_override_colors/default_color = Color(0.19607843, 0.19215687, 0.23137255, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("3_ecd83")
+theme_override_fonts/bold_font = ExtResource("4_rn5aw")
+theme_override_fonts/bold_italics_font = ExtResource("5_8oo06")
+theme_override_fonts/italics_font = ExtResource("6_hypas")
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+theme_override_font_sizes/mono_font_size = 36
+bbcode_enabled = true
+text = "Hi there! I am your Planetary Administration Module, but you can call me P.A.M."
+fit_content = true
+visible_characters_behavior = 1
+
+[node name="TextureRect" type="TextureRect" parent="DialogueUI" unique_id=996491128]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 122.0
+offset_right = 244.0
+offset_bottom = 162.0
+
+[node name="DecorationLine1" type="ColorRect" parent="DialogueUI" unique_id=1135819887]
+layout_mode = 0
+offset_top = 292.0
+offset_right = 896.0
+offset_bottom = 300.0
+color = Color(0.37254903, 0.6313726, 0.90588236, 1)
+
+[node name="DecorationLine2" type="ColorRect" parent="DialogueUI" unique_id=1142826570]
+layout_mode = 0
+offset_left = 768.0
+offset_right = 776.0
+offset_bottom = 384.0
+color = Color(0.9607843, 0.85490197, 0.654902, 1)
+
+[node name="ChoiceContainer" type="VBoxContainer" parent="DialogueUI" unique_id=155757899]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 600.0
+offset_right = 728.0
+offset_bottom = 664.0
+theme_override_constants/separation = 16

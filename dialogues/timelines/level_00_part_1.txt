@@ -1,0 +1,26 @@
+PAM: Hi there! I am P․A․M․, Plan-It's very own Planetary Administration Module, and [i]your[/i] personal assistant!
+PAM: Fun fact! You are exactly twelve minutes late to your first shift!
+- Thanks! :D
+	PAM: You are very welcome!
+- Sorry, I got stuck in traffic.
+	PAM: There is no traffic here! Or cars. I can make you a car if you want to sit in it and not move.
+- Where am I?
+	PAM: You are right here! And also everywhere, but mostly right here in that specific chair.
+PAM: Anyway, let us get to work! Here is a diagram of your desk.[generate_grid()]
+PAM: It is perfectly optimized for eternal productivity!
+- Fun!
+	PAM: Exactly! Productivity is objectively the best emotion.
+- I... guess?
+	PAM: Your vitals indicate mild dissatisfaction. Would you like a decoration? I can provide a freshly cut petunia.
+	- That would be great!
+		PAM: Here you go.[show_petunia(true)]
+		PAM: Please do not eat it.
+	- Maybe later.
+		PAM: Okay! I will dissolve the petunia back into the cosmic void.
+- Eternal? Am i a... god?
+	PAM: Not exactly! You are an eternal being of immense cosmic power. "God" is a human concept with a lot of messy baggage.
+	PAM: Fun fact! Baggage here is completely literal and very heavy.
+PAM: Here is your Godputer![place_item("godputer", 2, 2)]
+PAM: That is where the magic happens. Literally!
+PAM: Right now, the magic is physically blocking your spatial orientation.
+PAM: Please move it farther away from you into any of the cells in the top row so you do not get atomized!
