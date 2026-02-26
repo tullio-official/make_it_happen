@@ -12,6 +12,7 @@ script = ExtResource("1_upbjj")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1095494696]
 layout_mode = 2
 mouse_filter = 2
+color = Color(0.8666667, 0.8666667, 0.8666667, 1)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=194610629]
 custom_minimum_size = Vector2(160, 160)

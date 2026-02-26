@@ -14,3 +14,9 @@ func _ready():
 	
 	# Resumes dialogue
 	Dialogic.start("res://dialogues/timelines/level_00_part_2.dtl")
+	
+	# Await concept of tea to be mixed
+	await concept_of_tea_mixed
+	
+	# Resumes dialogue
+	Dialogic.start("res://dialogues/timelines/level_00_part_3.dtl")

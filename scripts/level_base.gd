@@ -1,6 +1,7 @@
 extends Control
 
 signal godputer_placed_on_top(is_top: bool)
+signal concept_of_tea_mixed(is_mixed: bool)
 
 const CELL_SCENE: PackedScene = preload("res://scenes/cell.tscn")
 
@@ -21,8 +22,11 @@ var recipe_db: Array = []
 func _ready() -> void:
 	load_recipes()
 	generate_grid()
-	place_item("matter", 1, 1)
-	place_item("matter", 1, 2)
+	place_item("concept_of_hot_water", 1, 1)
+	place_item("tea_bag", 1, 2)
+	
+	await concept_of_tea_mixed
+	print("mixed :3")
 
 ## Generates an empty X by Y grid based on the export variables and initializes grid_data.
 func generate_grid() -> void:
@@ -49,6 +53,7 @@ func generate_grid() -> void:
 			
 			# Listen for when an item is dropped onto this specific cell
 			cell_instance.item_dropped.connect(_on_cell_item_dropped)
+			cell_instance.successful_mix.connect(_on_successful_mix)
 			
 			grid_container.add_child(cell_instance)
 			
@@ -60,6 +65,12 @@ func _on_cell_item_dropped(pos: Vector2i, item_name: String) -> void:
 	# Check if godputer was placed in the top row
 	if item_name == "godputer" and pos.y == 1:
 		godputer_placed_on_top.emit(true)
+
+## Triggered when the successful_mix signal is emitted.
+func _on_successful_mix(outputs: Array) -> void:
+	# Check if concept_of_tea is in the output array
+	if "concept_of_tea" in outputs:
+		concept_of_tea_mixed.emit(true)
 
 ## Visually places an item in a specific cell and updates the grid_data dictionary.
 func place_item(item_name: String, x: int, y: int) -> void:
@@ -154,3 +165,6 @@ func check_combination(item1: String, item2: String) -> Array:
 	
 	# Return an empty array if no matching recipe is found
 	return []
+
+func show_petunia(is_visible: bool):
+	$Petunia.visible = is_visible

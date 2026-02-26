@@ -6,4 +6,4 @@ PAM: Before we begin, can I get you a hot beverage? I am currently offering the 
 	PAM: Fun fact! I do not actually have any coffee. I only have tea! Here is the concept of hot water and a teabag instead. Enjoy![signal=place_item\:concept_of_hot_water\:1\:2][signal=place_item\:tea_bag\:3\:2]
 - I don't really like either of those...
 	PAM: I completely understand! However, my beverage manifestation protocol is only outputting tea today. Please accept the concept of hot water and a teabag![signal=place_item\:concept_of_hot_water\:1\:2][signal=place_item\:tea_bag\:3\:2]
-PAM: Now, you simply need to submerge the teabag into the water. It is a very popular way to interact with liquid!
+PAM: Now, you simply need to submerge the teabag into the abstract water. It is a very popular way for biological entities to interact with liquid.

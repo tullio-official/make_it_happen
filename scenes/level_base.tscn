@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cac555ewysft"]
 
 [ext_resource type="Script" uid="uid://by2qql6ritif8" path="res://scripts/level_base.gd" id="1_548ah"]
+[ext_resource type="Texture2D" uid="uid://d0nwlpjpg4l05" path="res://assets/petunia.svg" id="2_osu2p"]
 
 [node name="LevelBase" type="Control" unique_id=1137938812]
 layout_mode = 3
@@ -12,12 +13,20 @@ cell_padding = 20
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0.30544603, 0.30544633, 0.30544585, 1)
+color = Color(0.93333334, 0.93333334, 0.93333334, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1282900429]
 layout_mode = 0
-offset_right = 1080.0
+offset_left = 840.0
+offset_right = 1920.0
 offset_bottom = 1080.0
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer" unique_id=813383932]
 layout_mode = 2
+
+[node name="Petunia" type="Sprite2D" parent="." unique_id=1040379318]
+visible = false
+position = Vector2(784, 316)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_osu2p")
+centered = false

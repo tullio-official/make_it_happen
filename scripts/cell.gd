@@ -1,6 +1,7 @@
 extends PanelContainer
 
 signal item_dropped(position: Vector2i, item_name: String)
+signal successful_mix(outputs: Array)
 
 var grid_pos: Vector2i
 var grid_data_ref: Dictionary
@@ -74,5 +75,7 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 				level_ref.place_item(outputs[1], data["start_pos"].x, data["start_pos"].y)
 				
 			item_dropped.emit(grid_pos, outputs[0])
+			successful_mix.emit(outputs)
+			print(outputs)
 		else:
 			return

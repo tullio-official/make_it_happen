@@ -26,11 +26,12 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "level_00_part_1": "res://dialogues/timelines/level_00_part_1.dtl",
-"level_00_part_2": "res://dialogues/timelines/level_00_part_2.dtl"
+"level_00_part_2": "res://dialogues/timelines/level_00_part_2.dtl",
+"level_00_part_3": "res://dialogues/timelines/level_00_part_3.dtl"
 }
 layout/style_directory={
-"": "res://dialogues/styles/pam_style.tres",
-"pam_style": "res://dialogues/styles/pam_style.tres"
+"": "res://dialogues/styles/pam_style/pam_style.tres",
+"pam_style": "res://dialogues/styles/pam_style/pam_style.tres"
 }
 glossary/default_case_sensitive=true
 extensions_folder="res://addons/dialogic_additions"
@@ -75,8 +76,8 @@ text/absolute_autopauses=false
 text/autoadvance_enabled=false
 text/input_action="dialogic_default_action"
 variables={}
-layout/style_list=["res://dialogues/styles/pam_style.tres"]
-layout/default_style="res://dialogues/styles/pam_style.tres"
+layout/style_list=["res://dialogues/styles/pam_style/pam_style.tres"]
+layout/default_style="res://dialogues/styles/pam_style/pam_style.tres"
 text/autoskip_time_per_event=0.1
 glossary/glossary_files=["uid://hy3v8e14x4bw"]
 glossary/default_color=Color(0.85490197, 0.7764706, 0.4, 1)
