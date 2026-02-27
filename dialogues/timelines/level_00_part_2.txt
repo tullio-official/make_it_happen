@@ -1,9 +1,11 @@
-PAM: Perfectly executed! Look at all this space. It is the absolute optimal amount of room for our activities.
-PAM: Before we begin, can I get you a hot beverage? I am currently offering the idea of tea, the idea of coffee, or whatever else you might want!
+P.A.M.: Perfectly executed! Look at all this space. It is the absolute optimal amount of room for our activities.
+P.A.M.: Before we begin, can I get you a hot beverage? I am currently offering the idea of tea and coffee!
 - Tea, please.
-	PAM: Excellent choice. I have provided the concept of hot water and a teabag just for you.[place_item(concept_of_hot_water, 1, 2)][place_item(tea_bag, 3, 2)]
+	P.A.M.: Excellent choice. I have provided the concept of hot water and a teabag just for you.[place_item(concept_of_hot_water, 1, 2)][place_item(tea_bag, 3, 2)]
 - Coffee, please.
-	PAM: Fun fact! I do not actually have any coffee. I only have tea! Here is the concept of hot water and a teabag instead. Enjoy![place_item(concept_of_hot_water, 1, 2)][place_item(tea_bag, 3, 2)]
+	P.A.M.: Fun fact! I do not actually have any coffee. I only have tea! Here is the concept of hot water and a teabag instead. Enjoy![place_item(concept_of_hot_water, 1, 2)][place_item(tea_bag, 3, 2)]
 - I don't really like either of those...
-	PAM: I completely understand! However, my beverage manifestation protocol is only outputting tea today. Please accept the concept of hot water and a teabag![place_item(concept_of_hot_water, 1, 2)][place_item(tea_bag, 3, 2)]
-PAM: Now, you simply need to submerge the teabag into the abstract water. It is a very popular way for biological entities to interact with liquid.
+	P.A.M.: Not a problem! I have instantly deleted that preference from my database.
+	P.A.M.: Since tea is the only item currently rendering in this plane of existence, I am cheerfully giving it to you anyway.
+	P.A.M.: Please enjoy the concept of hot water and a teabag![place_item(concept_of_hot_water, 1, 2)][place_item(tea_bag, 3, 2)]
+P.A.M.: Now, you simply need to submerge the teabag into the abstract water. It is a very popular way for biological entities to interact with liquid.
